@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="890.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CustomersControllers">
+   <children>
+      <Pane prefHeight="100.0" prefWidth="890.0" style="-fx-background-color: blue;">
+         <children>
+            <Label layoutX="6.0" layoutY="3.0" text="Our Customers" textFill="#fdfffd">
+               <font>
+                  <Font name="System Bold" size="66.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imageConnect" fitHeight="96.0" fitWidth="99.0" layoutX="780.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+         </children>
+      </Pane>
+      <Pane layoutX="225.0" layoutY="101.0" prefHeight="207.0" prefWidth="666.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="16.0" layoutY="8.0" styleClass="customerInfo" text="First Name" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="firstNamefld" layoutX="177.0" layoutY="13.0" prefHeight="30.0" prefWidth="225.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="16.0" layoutY="45.0" styleClass="customerInfo" text="Last Name" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="lastNamefld" layoutX="177.0" layoutY="50.0" prefHeight="30.0" prefWidth="225.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="16.0" layoutY="82.0" styleClass="customerInfo" text="Phone" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="phonefld" layoutX="177.0" layoutY="87.0" prefHeight="30.0" prefWidth="225.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="16.0" layoutY="119.0" styleClass="customerInfo" text="Email" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailfld" layoutX="177.0" layoutY="124.0" prefHeight="30.0" prefWidth="225.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <Label layoutX="16.0" layoutY="156.0" styleClass="customerInfo" text="City" textFill="WHITE">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <TextField fx:id="cityfld" layoutX="177.0" layoutY="161.0" prefHeight="30.0" prefWidth="225.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <ImageView fx:id="CustomerImageView" fitHeight="179.0" fitWidth="180.0" layoutX="437.0" layoutY="11.0" onMouseClicked="#onCustomerImage_Clicked" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../appimgs/client.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TableView fx:id="tb_Customers" layoutX="225.0" layoutY="310.0" onMouseClicked="#onTableRowClicked" prefHeight="490.0" prefWidth="666.0">
+        <columns>
+          <TableColumn fx:id="firstNamec" prefWidth="113.0" text="First Name" />
+          <TableColumn fx:id="lastNamec" prefWidth="115.0" text="Last Name" />
+            <TableColumn fx:id="phonec" prefWidth="144.0" text="Phone" />
+            <TableColumn fx:id="emailc" prefWidth="193.0" text="Email" />
+            <TableColumn fx:id="cityc" prefWidth="100.0" text="City" />
+        </columns>
+      </TableView>
+      <Pane layoutX="-1.0" layoutY="99.0" prefHeight="704.0" prefWidth="225.0" style="-fx-background-color: yellow;">
+         <children>
+            <Button layoutY="70.0" mnemonicParsing="false" onAction="#btnGoDown_clicked" prefHeight="69.0" prefWidth="225.0" text="Go Down">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="140.0" mnemonicParsing="false" onAction="#btnAddCustomers_Clicked" prefHeight="69.0" prefWidth="225.0" text="Add Customer">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#btnGoUp_Clicked" prefHeight="69.0" prefWidth="225.0" text="Go Up">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="210.0" mnemonicParsing="false" onAction="#btnUpdateCustomers_Clicked" prefHeight="69.0" prefWidth="225.0" text="Update Customer">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Button>
+            <Button layoutX="1.0" layoutY="280.0" mnemonicParsing="false" onAction="#btnDeleteCustomer_Clicked" prefHeight="69.0" prefWidth="225.0" text="Delete Customer">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCloseWindow" layoutX="1.0" layoutY="350.0" mnemonicParsing="false" onAction="#btnCloseWindow_Clicked" prefHeight="69.0" prefWidth="225.0" text="Close Window">
+               <font>
+                  <Font size="25.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

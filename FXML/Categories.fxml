@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="696.0" prefWidth="900.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.CategoriesController">
+   <children>
+      <Pane prefHeight="100.0" prefWidth="900.0" style="-fx-background-color: blue;">
+         <children>
+            <Label layoutX="186.0" layoutY="1.0" text="Our Categories" textFill="WHITE">
+               <font>
+                  <Font name="Berlin Sans FB Demi Bold" size="85.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="connectCategorieImage" fitHeight="99.0" fitWidth="172.0" layoutX="1.0" pickOnBounds="true" />
+         </children>
+      </Pane>
+      <TableView fx:id="tb_Categories" layoutX="10.0" layoutY="117.0" onMouseClicked="#onTableRow_Clicked" prefHeight="493.0" prefWidth="442.0">
+        <columns>
+          <TableColumn fx:id="cname" prefWidth="145.0" text="Categorie Name" />
+          <TableColumn fx:id="cdescription" prefWidth="295.0" text="Categorie Description" />
+        </columns>
+      </TableView>
+      <Pane layoutX="463.0" layoutY="364.0" prefHeight="245.0" prefWidth="427.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="5.0" layoutY="14.0" text="Categorie Name" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="5.0" layoutY="55.0" text="Categorie Description :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <TextField fx:id="namefld" layoutX="178.0" layoutY="17.0" prefHeight="30.0" prefWidth="234.0">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="descriptionfld" layoutX="20.0" layoutY="93.0" prefHeight="134.0" prefWidth="392.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </TextArea>
+         </children>
+      </Pane>
+      <ImageView fx:id="ImageCategorie" fitHeight="234.0" fitWidth="427.0" layoutX="460.0" layoutY="117.0" onMouseClicked="#onImageCategorie_Clicked" pickOnBounds="true">
+         <image>
+            <Image url="@../appimgs/categories.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="51.0" layoutY="626.0" mnemonicParsing="false" onAction="#onAddBtnClicked" prefHeight="56.0" prefWidth="203.0" style="-fx-background-color: blue;" text="Add Categorie" textFill="#fcfcfc">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="262.0" layoutY="626.0" mnemonicParsing="false" onAction="#onUpdateBtn_Clicked" prefHeight="56.0" prefWidth="203.0" style="-fx-background-color: blue;" text="Update Categorie" textFill="#fcfcfc">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button layoutX="473.0" layoutY="626.0" mnemonicParsing="false" onAction="#onDeleteBtn_Clicked" prefHeight="56.0" prefWidth="197.0" style="-fx-background-color: blue;" text="Delete Categorie" textFill="#fcfcfc">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClose" layoutX="676.0" layoutY="626.0" mnemonicParsing="false" onAction="#onBtnClose_Clicked" prefHeight="56.0" prefWidth="179.0" style="-fx-background-color: blue;" text="Close Window" textFill="#fcfcfc">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

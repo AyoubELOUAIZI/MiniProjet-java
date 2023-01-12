@@ -1,0 +1,15 @@
+.btnUp{
+	
+	 -fx-background-image: url('../appimgs/up.png');
+	 -fx-background-size: stretch;
+}
+.btndown{
+	 -fx-background-image: url('../appimgs/bttonDown.png');
+	 -fx-background-size: stretch;
+	
+}
+.table{
+-fx-text-fill: red;
+
+
+}

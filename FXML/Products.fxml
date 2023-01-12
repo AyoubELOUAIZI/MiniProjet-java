@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="820.0" prefWidth="1590.0" style="-fx-background-color: blue;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ProductsController">
+   <children>
+      <Pane prefHeight="80.0" prefWidth="1590.0" style="-fx-background-color: yellow;">
+         <children>
+            <Label layoutX="3.0" layoutY="1.0" text="Our Products" textFill="#3e48d7">
+               <font>
+                  <Font name="Arial Black" size="55.0" />
+               </font>
+            </Label>
+            <TextField layoutX="1138.0" layoutY="23.0" onInputMethodTextChanged="#onSearchTextChanged" prefHeight="35.0" prefWidth="362.0">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </TextField>
+            <ImageView fitHeight="62.0" fitWidth="115.0" layoutX="1514.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../appimgs/procurar.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="1030.0" layoutY="16.0" text="Search" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="32.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="ImaConProduct" fitHeight="80.0" fitWidth="181.0" layoutX="416.0" pickOnBounds="true" />
+         </children>
+      </Pane>
+      <TableView fx:id="tb_Product" layoutX="21.0" layoutY="103.0" onMouseClicked="#onTableProductRow_Clicked" prefHeight="619.0" prefWidth="841.0">
+        <columns>
+          <TableColumn fx:id="namec" prefWidth="161.0" text="Product Name" />
+          <TableColumn fx:id="descriptionfc" prefWidth="288.0" text="Product Description" />
+            <TableColumn fx:id="quantityfc" prefWidth="89.0" text="Quantity" />
+            <TableColumn fx:id="pricec" minWidth="0.0" prefWidth="105.0" text="Price(DH)" />
+            <TableColumn fx:id="categoriec" prefWidth="196.0" text="Product Categorie" />
+        </columns>
+      </TableView>
+      <ImageView fx:id="imgV2" fitHeight="212.0" fitWidth="312.0" layoutX="1264.0" layoutY="103.0" pickOnBounds="true">
+         <image>
+            <Image url="@../appimgs/choseProduct.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgV1" fitHeight="212.0" fitWidth="376.0" layoutX="879.0" layoutY="103.0" pickOnBounds="true">
+         <image>
+            <Image url="@../appimgs/choseProduct.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="imgV3" fitHeight="486.0" fitWidth="699.0" layoutX="880.0" layoutY="320.0" pickOnBounds="true">
+         <image>
+            <Image url="@../appimgs/choseProduct.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="21.0" layoutY="734.0" mnemonicParsing="false" onAction="#btnAddProduct_Clicked" prefHeight="62.0" prefWidth="133.0" style="-fx-background-color: green;" text="Add Product" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="163.0" layoutY="734.0" mnemonicParsing="false" onAction="#btnUpdate_Clicked" prefHeight="62.0" prefWidth="159.0" style="-fx-background-color: green;" text="Update Product" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="329.0" layoutY="734.0" mnemonicParsing="false" onAction="#btnDelete_Clicked" prefHeight="62.0" prefWidth="159.0" style="-fx-background-color: red;" text="Delete Product" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="496.0" layoutY="734.0" mnemonicParsing="false" onAction="#btnGoUp_Clicked" prefHeight="62.0" prefWidth="100.0" style="-fx-background-color: yellow;" text="Go Up" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="605.0" layoutY="734.0" mnemonicParsing="false" onAction="#btnGoDown_Clicked" prefHeight="62.0" prefWidth="106.0" style="-fx-background-color: yellow;" text="Go Down" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClose" layoutX="718.0" layoutY="734.0" mnemonicParsing="false" onAction="#btnClose_Clicked" prefHeight="62.0" prefWidth="147.0" style="-fx-background-color: red;" text="Close Window" textFill="#fcfcfc">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
